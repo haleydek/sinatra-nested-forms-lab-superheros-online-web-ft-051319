@@ -2,7 +2,7 @@ class Team
   attr_reader :name, :motto
   @@all = []
   
-  def initialize(params)
+  def initialize(team)
     @name = team["name"]
     @motto = team["motto"]
     @@all << self
