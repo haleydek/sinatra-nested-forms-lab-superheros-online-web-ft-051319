@@ -9,7 +9,7 @@ class App < Sinatra::Base
     end
 
     get '/teams' do
-      @team = Team.all
+      @team = Team.all.find_with_index(0)
       @heroes = Hero.all
       erb :team
     end
