@@ -7,6 +7,12 @@ class App < Sinatra::Base
     get '/' do
       erb :super_hero
     end
+
+    get '/teams' do
+      @team = Team.all 
+      @heroes = Hero.all
+      erb :team
+    end
     
     post '/teams' do
       Team.new(params[:team])
@@ -16,9 +22,4 @@ class App < Sinatra::Base
       redirect '/teams'
     end
     
-    get '/teams' do
-      @team = Team.all 
-      @heroes = Hero.all
-      erb :team
-    end
 end
