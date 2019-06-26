@@ -19,6 +19,7 @@ class App < Sinatra::Base
       params[:team][:heroes].each do |hero_hash|
         Hero.new(hero_hash)
       end
+      erb :team
       redirect '/teams'
     end
     
