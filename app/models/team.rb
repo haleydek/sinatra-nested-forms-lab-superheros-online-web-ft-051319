@@ -2,9 +2,9 @@ class Team
   attr_reader :name, :motto
   @@all = []
   
-  def initialize(team)
-    @name = team["name"]
-    @motto = team["motto"]
+  def initialize(team_hash)
+    @name = team_hash["name"]
+    @motto = team_hash["motto"]
     @@all << self
   end
   
