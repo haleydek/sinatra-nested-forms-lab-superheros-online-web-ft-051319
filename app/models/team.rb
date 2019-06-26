@@ -3,8 +3,8 @@ class Team
   @@all = []
   
   def initialize(team_hash)
-    @name = team_hash[:name]
-    @motto = team_hash[:motto]
+    @name = team_hash["name"]
+    @motto = team_hash["motto"]
     @@all << self
   end
   
