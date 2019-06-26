@@ -18,7 +18,6 @@ class App < Sinatra::Base
       Team.new(params[:team])
       params[:team][:heroes].each do |hero_hash|
         Hero.new(hero_hash)
-        binding.pry
       end
       redirect '/teams'
     end
