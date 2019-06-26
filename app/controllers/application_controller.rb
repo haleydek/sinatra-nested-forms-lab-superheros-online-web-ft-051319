@@ -9,7 +9,7 @@ class App < Sinatra::Base
     end
 
     get '/teams' do
-      @team = Team.all.first
+      @team = Team.all
       @heroes = Hero.all
       erb :team
     end
