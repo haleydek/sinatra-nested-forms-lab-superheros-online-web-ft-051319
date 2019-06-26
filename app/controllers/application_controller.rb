@@ -15,7 +15,7 @@ class App < Sinatra::Base
     end
     
     post '/teams' do
-      Team.new(params)
+      Team.new(params[:team])
       params[:team][:heroes].each do |hero_hash|
         Hero.new(hero_hash)
       end
